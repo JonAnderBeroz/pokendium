@@ -74,6 +74,9 @@
 </ul>
 
 <style>
+	.pokeball {
+		align-self: center;
+	}
 	ul {
 		display: flex;
 		flex-direction: column;
@@ -86,7 +89,7 @@
 
 	li {
 		--active-pos: calc(50vh - 20px);
-		--right-pos: 225px;
+		--right-pos: 250px;
 		align-items: center;
 		background-color: var(--bg, #b8b0b8);
 		border-radius: 200px 65px 65px 200px;
@@ -99,7 +102,7 @@
 		position: absolute;
 		right: calc(var(--right-pos) - var(--offsetRight));
 		top: calc(var(--active-pos) + var(--offsetTop));
-		width: 240px;
+		width: 250px;
 	}
 	li::before {
 		background-color: var(--circleBg);

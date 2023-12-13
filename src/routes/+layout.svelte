@@ -10,14 +10,25 @@
 			url('../fonts/PressStart2P-Regular.woff') format('woff');
 	}
 
+	@font-face {
+		font-family: 'pokemon-solid';
+		src: url('../fonts/pokemon-solid.woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
 	:global(body) {
 		font-family: 'Press Start 2P';
 		font-size: 14px;
 		overflow: hidden;
 		image-rendering: auto;
 		display: flex;
-		justify-content: end;
-		align-items: center;
+		flex-direction: column;
+		margin: 0;
+		padding: 10px;
+		gap: 50px;
+		justify-content: center;
+		height: 100svh;
 	}
 
 	*,
