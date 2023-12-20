@@ -2,20 +2,7 @@
 
 <style>
 	@import url('../styles/water.css');
-
-	@font-face {
-		font-family: 'Press Start 2P';
-		src:
-			url('../fonts/PressStart2P-Regular.woff2') format('woff2'),
-			url('../fonts/PressStart2P-Regular.woff') format('woff');
-	}
-
-	@font-face {
-		font-family: 'pokemon-solid';
-		src: url('../fonts/pokemon-solid.woff');
-		font-weight: normal;
-		font-style: normal;
-	}
+	@import url('../styles/fonts.css');
 
 	:global(body) {
 		font-family: 'Press Start 2P';
@@ -27,7 +14,6 @@
 		margin: 0;
 		padding: 10px;
 		gap: 50px;
-		justify-content: center;
 		height: 100svh;
 	}
 

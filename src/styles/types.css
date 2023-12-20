@@ -1,0 +1,89 @@
+.bug {
+  background: #aebc2d;
+  background: linear-gradient(0deg, #aebc2d 0%, #87960f 51%, #aebe30 100%);
+}
+
+.dark {
+  background: #573535;
+  background: linear-gradient(0deg, #573535 0%, #3e2e21 51%, #513d2f 100%);
+}
+
+.dragon {
+  background: #7660e3;
+  background: linear-gradient(0deg, #7660e3 0%, #55459c 51%, #7762e0 100%);
+}
+
+.electric {
+  background: #f8bf26;
+  background: linear-gradient(0deg, #f8bf26 0%, #e89504 51%, #fdba16 100%);
+}
+
+.fairy {
+  background: #f3b2f3;
+  background: linear-gradient(0deg, #f3b2f3 0%, #d993d8 51%, #f3aff1 100%);
+}
+
+.fighting {
+  background: #7f331b;
+  background: linear-gradient(0deg, #7f331b 0%, #5f2114 51%, #80321b 100%);
+}
+
+.fire {
+  background: #ec4512;
+  background: linear-gradient(0deg, #ec4512 0%, #c72200 51%, #f14310 100%);
+}
+
+.flying {
+  background: #9ca9f4;
+  background: linear-gradient(0deg, #9ca9f4 0%, #5d73d7 51%, #96a8f0 100%);
+}
+
+.ghost {
+  background: #5f60b1;
+  background: linear-gradient(0deg, #5f60b1 0%, #484493 51%, #6261ab 100%);
+}
+
+.grass {
+  background: #78c53c;
+  background: linear-gradient(0deg, #78c53c 0%, #418122 51%, #88c652 100%);
+}
+
+.ground {
+  background: #d5b86b;
+  background: linear-gradient(0deg, #d5b86b 0%, #ac9144 51%, #d6b96c 100%);
+}
+
+.ice {
+  background: #b3e9fb;
+  background: linear-gradient(0deg, #b3e9fb 0%, #6fd1f7 51%, #bbebf9 100%);
+}
+
+.normal {
+  background: #c6c2ba;
+  background: linear-gradient(0deg, #c6c2ba 0%, #b1aca2 51%, #c7c2b8 100%);
+}
+
+.poison {
+  background: #934795;
+  background: linear-gradient(0deg, #934795 0%, #612d61 51%, #934994 100%);
+}
+
+.psychic {
+  background: rgb(235,71,129);
+  background: linear-gradient(0deg, #eb4781 0%, #e13266 51%, #e74a81 100%);
+}
+
+.rock {
+  background: #bba25d;
+  background: linear-gradient(0deg, #bba25d 0%, #a1883e 51%, #bba564 100%);
+}
+
+.steel {
+  background: #c0c1c9;
+  background: linear-gradient(0deg, #c0c1c9 0%, #8f8e9e 51%, #c8c8d4 100%);
+}
+
+.water {
+  background: #3a9af9;
+  background: linear-gradient(0deg, #3a9af9 0%, #0d66c3 51%, #6cb1f3 100%);
+}

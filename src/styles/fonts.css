@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Press Start 2P';
+  src:
+    url('../fonts/PressStart2P-Regular.woff2') format('woff2'),
+    url('../fonts/PressStart2P-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'pokemon-solid';
+  src: url('../fonts/pokemon-solid.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

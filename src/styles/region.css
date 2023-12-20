@@ -1,0 +1,53 @@
+.region.kanto {
+  background: #ff0000;
+  background: linear-gradient(
+    95deg,
+    #ff0000 0%,
+    #0000ff 100%
+  );
+}
+
+.region.johto {
+  background: #d2c21a;
+  background: linear-gradient(95deg, #d2c21a 0%, #a0a0a0 73%);
+}
+
+.region.hoenn {
+  background: #b80000;
+  background: linear-gradient(95deg, #b80000 12%, #0d00b8 73%);
+}
+
+.region.sinnoh {
+  background: #6077ff;
+  background: linear-gradient(95deg, #6077ff 20%, #fc72e4 100%);
+}
+
+.region.unova {
+  background: #424242;
+  background: linear-gradient(95deg, #424242 0%, #f2f2f2 100%);
+}
+
+.region.kalos {
+  background: #0084c3;
+  background: linear-gradient(95deg, #0084c3 0%, #8f0305 66%);
+}
+
+.region.alola {
+  background: #ffa500;
+  background: linear-gradient(95deg, #ffa500 0%, #b401ff 85%);
+}
+
+.region.galar {
+  background: #00a2ed;
+  background: linear-gradient(95deg, #00a2ed 0%, #ff0060 70%);
+}
+
+.region.hisui {
+  background: #e5bb6e;
+  background: linear-gradient(95deg, #e5bb6e 0%, #352e2c 69%);
+}
+
+.region.paldea {
+  background: #d82928;
+  background: linear-gradient(95deg, #d82928 0%, #9d31a5 74%);
+}
