@@ -161,7 +161,8 @@
 			{@const index = Math.abs(dif) % 3}
 			<li
 				class:active={entry_number === active}
-				style="--offsetRight: calc(20px * abs({dif}));
+				style="
+						--offsetRight: calc(20px * {Math.abs(dif)});
 						--offsetTop: calc(40px * {dif});
 						--bg: {bgs[index]};
 						--circleBg: {circleBgs[index]};
