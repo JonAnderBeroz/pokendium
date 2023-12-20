@@ -31,6 +31,33 @@
 		goto(`${regionPath}/${index}`, { replaceState: true });
 	};
 
+	const changePokemon = (amount: number) => {
+		const pokeball = document.querySelector('.pokeball');
+
+		active += amount;
+		currentMon += amount;
+		if (active > pokeAmount) {
+			active = 1;
+			currentMon = 0;
+		}
+		if (active < 1) {
+			active = pokeAmount;
+			currentMon = pokeAmount - 1;
+		}
+		pokeball?.animate(
+			[{ transform: 'rotate(0)' }, { transform: `rotate(${amount * 360}deg)` }],
+			{
+				duration: 300,
+				iterations: 1,
+			},
+		);
+		clearTimeout(timeoutId);
+		timeoutId = setTimeout(() => {
+			pNumber = getPokemonNumber(currentMon);
+			setPokemon(pNumber);
+		}, 200);
+	};
+
 	let currentMon = 0;
 	let active = 1;
 	let pNumber = getPokemonNumber(currentMon);
@@ -55,35 +82,13 @@
 		});
 		document.addEventListener('keydown', (e: KeyboardEvent) => {
 			if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+			const amount = e.key === 'ArrowDown' ? 1 : -1;
 
-			const pokeball = document.querySelector('.pokeball');
-			const index = e.key === 'ArrowDown' ? 1 : -1;
-
-			active += index;
-			currentMon += index;
-			if (active > pokeAmount) {
-				active = 1;
-				currentMon = 0;
-			}
-			if (active < 1) {
-				active = pokeAmount;
-				currentMon = pokeAmount - 1;
-			}
-			pokeball?.animate(
-				[
-					{ transform: 'rotate(0)' },
-					{ transform: `rotate(${index * 360}deg)` },
-				],
-				{
-					duration: 300,
-					iterations: 1,
-				},
-			);
-			clearTimeout(timeoutId);
-			timeoutId = setTimeout(() => {
-				pNumber = getPokemonNumber(currentMon);
-				setPokemon(pNumber);
-			}, 200);
+			changePokemon(amount);
+		});
+		document.addEventListener('wheel', (e: WheelEvent) => {
+			const amount = e.deltaY > 0 ? 1 : -1;
+			changePokemon(amount);
 		});
 	});
 </script>
