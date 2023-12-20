@@ -39,6 +39,20 @@
 	setPokemon(pNumber);
 
 	onMount(() => {
+		const $ = (element: string) => document.querySelector(element);
+
+		const dialog = $('#infoDialog');
+
+		if (!(dialog instanceof HTMLDialogElement)) return;
+
+		$('#howToButton')?.addEventListener('click', (e) => {
+			e.preventDefault();
+			dialog?.showModal();
+		});
+		$('#closeModalBtn')?.addEventListener('click', (e) => {
+			e.preventDefault();
+			dialog?.close();
+		});
 		document.addEventListener('keydown', (e: KeyboardEvent) => {
 			if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
 
@@ -74,12 +88,59 @@
 	});
 </script>
 
-<section>
+<section class="layout-container">
 	<slot />
 
-	<dialog>patatata</dialog>
+	<dialog id="infoDialog">
+		<section class="dialog-body">
+			<button id="closeModalBtn">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-x"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+						d="M18 6l-12 12"
+					/><path d="M6 6l12 12" /></svg
+				>
+			</button>
+			<p class="instruction">
+				Usa <img src="/up-arrow.png" alt="arrow" height="45" width="45" /> para ir
+				al pokemon anterior
+			</p>
+			<p class="instruction">
+				Usa <img src="/down-arrow.png" alt="arrow" height="45" width="45" /> para
+				ir al pokemon siguiente
+			</p>
+		</section>
+	</dialog>
 
-	<button id="howToButton">Ayuda</button>
+	<button id="howToButton">
+		Ayuda
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			class="icon icon-tabler icon-tabler-help-circle-filled"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			stroke-width="2"
+			stroke="currentColor"
+			fill="none"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path
+				d="M12 2c5.523 0 10 4.477 10 10a10 10 0 0 1 -19.995 .324l-.005 -.324l.004 -.28c.148 -5.393 4.566 -9.72 9.996 -9.72zm0 13a1 1 0 0 0 -.993 .883l-.007 .117l.007 .127a1 1 0 0 0 1.986 0l.007 -.117l-.007 -.127a1 1 0 0 0 -.993 -.883zm1.368 -6.673a2.98 2.98 0 0 0 -3.631 .728a1 1 0 0 0 1.44 1.383l.171 -.18a.98 .98 0 0 1 1.11 -.15a1 1 0 0 1 -.34 1.886l-.232 .012a1 1 0 0 0 .111 1.994a3 3 0 0 0 1.371 -5.673z"
+				stroke-width="0"
+				fill="currentColor"
+			/>
+		</svg>
+	</button>
 
 	<img
 		class="pokeball"
@@ -109,7 +170,60 @@
 </section>
 
 <style>
-	section {
+	.dialog-body {
+		display: flex;
+		flex-direction: column;
+		min-width: 350px;
+		aspect-ratio: 2/1;
+	}
+
+	.instruction {
+		margin: auto;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.dialog-body > button {
+		background-color: transparent;
+		display: flex;
+		justify-content: center;
+		padding: 0px;
+		width: 34px;
+		height: 34px;
+		align-items: center;
+		align-self: flex-end;
+		margin-right: -20px;
+		transition: all 0.2s ease-in;
+		border-radius: 100%;
+	}
+
+	.dialog-body > button:focus {
+		outline: 0;
+		box-shadow: none;
+	}
+
+	.dialog-body > button:hover {
+		background-color: #30373c;
+	}
+
+	#howToButton {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		padding-inline: 5px;
+		width: 120px;
+	}
+
+	#howToButton:focus {
+		outline: 0;
+		box-shadow: none;
+	}
+
+	.layout-container {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
